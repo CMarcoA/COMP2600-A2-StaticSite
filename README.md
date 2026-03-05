@@ -1,45 +1,68 @@
-# COMP2600-A2-SITE
+# Resume Website README (Draft / Incomplete) - GitHub Pages + Pelican
 
-This project is a personal resume website built with Pelican.
+## Purpose
 
-## Requirements
+This README (draft) describes how I formatted my resume in **Markdown** and published it as a **static website** using **Pelican** and **GitHub Pages**.
 
-- Python 3.10+ (or any Python 3 version supported by your environment)
-- `pip`
+Workflow to ideas from Andrew Etter’s *Modern Technical Writing*: 
+- write in plain text
+- keep content separate from presentation
+- treat documentation like code (version control)
+- make publishing repeatable through automation.
 
-## Setup
+## Prerequisites
+- Git + a GitHub account
+- Python 3 + pip
+- Terminal (PowerShell/Terminal)
+- Pelican installed (usually in a virtual environment)
 
-From the project root:
+## Instructions (Draft)
+### 1) Create the project (Etter: “make the process repeatable”)
+1. Create a new folder for the project (example: `resume-site/`).
+2. Initialize Git: `git init`
+3. Create a GitHub repo and add it as a remote (TODO: paste repo name/link later).
 
-```powershell
-cd "d:\COMP2600\Assignment2\COMP2600-A2-SITE"
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install pelican markdown
-```
+### 2) Set up Pelican (Etter: “separate content from tools”)
+4. Create and activate a virtual environment
+5. Install Pelican: `pip install pelican`
+6. Run `pelican-quickstart` and choose basic options (site name, URL, etc.)
+7. Check `pelicanconf.py` and set the site title and any page settings
 
-If `python` does not work, use `py` instead.
+### 3) Write the resume in Markdown (Etter: “plain text wins”)
+8. Create a resume page like `content/pages/resume.md`.
+9. Use headings for sections (Education / Experience / Projects).
+10. Use bullet points for achievements, keeping each bullet specific and easy to scan.
 
-## Build the site
 
-```powershell
-python -m pelican content -o output -s pelicanconf.py
-```
+### 4) Build + preview locally
+11. Build the site (one of these, depending on setup):
+    - `pelican content -o output -s pelicanconf.py`  
+    - or `make html` (if Pelican created a Makefile)
+12. Serve locally:
+   - `pelican --listen`  
+   - or `make serve`
+13. Open the local URL and check formatting, spacing, and navigation
 
-## Run locally
 
-```powershell
-python -m http.server 8000 -d output
-```
+### 5) Publish on GitHub Pages (“automate publishing”)
+14. Commit your source changes: `git add .` then `git commit -m "Add resume content"`
+15. Generate the site into `output/`.
+16. Deploy `output/` to a `gh-pages` branch (common approach):
+17. In the repo settings, enable **GitHub Pages** to serve from `gh-pages`
 
-Open <http://localhost:8000> in your browser.
 
-## Update content
+## Further resources / readings (Incomplete)
+- Pelican docs: https://docs.getpelican.com/
+- GitHub Pages docs: https://docs.github.com/en/pages
 
-Edit files in `content/`, then rebuild:
+## FAQ (Draft)
+**Why use Markdown instead of writing raw HTML?**  
+Markdown is faster to write, easier to edit, and cleaner to track in Git. Pelican converts it to HTML automatically
 
-```powershell
-python -m pelican content -o output -s pelicanconf.py
-```
+**I updated `resume.md`, why don’t I see changes on the live site?**  
+Usually: I forgot to rebuild the site, I didn’t deploy the new `output/` to `gh-pages`, Pages is pointed at the wrong branch, or my browser cached the old version.
 
-Refresh your browser to see changes.
+## Credits (Incomplete)
+- README + resume content: Claudius Marco Andrew
+- Tools: Pelican + GitHub Pages
+- Theme/assets: default
