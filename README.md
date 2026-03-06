@@ -1,10 +1,10 @@
-# Resume Website README (Draft / Incomplete) - GitHub Pages + Pelican
+# Resume Website README - GitHub Pages + Pelican
 
 ## Purpose
 
 This README (draft) describes how I formatted my resume in **Markdown** and published it as a **static website** using **Pelican** and **GitHub Pages**.
 
-Workflow to ideas from Andrew Etter’s *Modern Technical Writing*: 
+Workflow to ideas based from Andrew Etter’s Modern Technical Writing: 
 - write in plain text
 - keep content separate from presentation
 - treat documentation like code (version control)
@@ -60,6 +60,7 @@ Markdown is better tool in this case because it lets us focus on the content of 
 In the long run, markdown is also easier to maintain over time. If we need to update a particular section for example: education, experience, or skills later, I can open one text file, change the wording, save it, and rebuild the site. 
 Because the file is plain text, it also works hand in hand with Git. For a resume website, a useful feature is tracking changes, because resumes often change in small but important ways. Git can clearly show what lines changed between versions, which makes the editing process easier to track. 
 Overall, Markdown is a better choice here because it is simpler, faster to edit, easier to version control, and more consistent with the workflow recommended in Modern Technical Writing.
+
 
 **The resume.md file was updated, so why are the changes not visible on the live website?**
 
