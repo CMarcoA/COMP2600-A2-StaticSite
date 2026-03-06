@@ -20,10 +20,10 @@ Workflow to ideas from Andrew Etter’s *Modern Technical Writing*:
 ### 1) Create the project (Etter: “make the process repeatable”)
 1. Create a new folder for the project (example: `resume-site/`).
 2. Initialize Git: `git init`
-3. Create a GitHub repo and add it as a remote (TODO: paste repo name/link later).
+3. Create a GitHub repository and add it as a remote
 
 ### 2) Set up Pelican (Etter: “separate content from tools”)
-4. Create and activate a virtual environment
+4. Create and activate a virtual environment `$env:VIRTUAL_ENV`
 5. Install Pelican: `pip install pelican`
 6. Run `pelican-quickstart` and choose basic options (site name, URL, etc.)
 7. Check `pelicanconf.py` and set the site title and any page settings
